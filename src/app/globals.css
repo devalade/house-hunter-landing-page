@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .text-shadow {
+        text-shadow: -1px 1px 0 #1B1C57,
+                          1px 1px 0 #1B1C57,
+                         1px -1px 0 #1B1C57,
+                        -1px -1px 0 #1B1C57;
+    }
+}   

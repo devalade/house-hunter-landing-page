@@ -17,7 +17,37 @@ module.exports = {
       },
     },
     extend: {
-      'content': ['Lexend']
+      'content': ['Lexend'],
+      colors: {
+        white: "#FFF",
+        neutral: "#F0F3FD",
+        blurColor: "#82FFD2",
+        brandGreen: {
+          "100": "#D1FAE5",
+          "500": "#10B981",
+          "700": "#047857",
+        },
+        brandBlue: {
+          "100": "626687",
+          "700": "#1B1C57"
+        },
+        brandGray: {
+          "500": "#888B97"
+        }
+      },
+      animation: {
+        reveal: 'reveal 0.8s forwards',
+      },
+      keyframes: {
+        reveal: {
+          '0%': {
+            transform: 'translatey(100%)',
+          },
+          '100%': {
+            transform: 'translatey(0)',
+          },
+        },
+      },
     },
   },
   plugins: [],
