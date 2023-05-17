@@ -33,6 +33,9 @@ module.exports = {
         },
         brandGray: {
           "500": "#888B97"
+        },
+        brandYellow: {
+          "500": "#F59E0B"
         }
       },
       animation: {
