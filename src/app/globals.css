@@ -11,4 +11,9 @@
                          1px -1px 0 #1B1C57,
                         -1px -1px 0 #1B1C57;
     }
+
+    .text-stroke {
+        -webkit-text-stroke: 1px #1B1C57;
+        text-stroke: 1px #1B1C57;
+    }
 }   

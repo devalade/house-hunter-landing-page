@@ -1,13 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {PropsWithChildren} from 'react'
+import { PropsWithChildren } from 'react'
 import {Button} from './components/ui';
-import {ChevronRight} from './icon/chevon-right';
-import {LocationIcon} from './icon/location';
+import { ChevronRight } from './icon/chevon-right-icon';
+import { LocationIcon } from './icon/location-icon';
+import OurRecommendation from './components/our-recommendation';
 
 export default function Home() {
   return (
-    <main className="relative w-full h-screen">
+    <main>  
+      <div className="relative w-full h-screen">
           <span className='absolute -left-28  top-6 bg-[#82F7FF] w-60 aspect-square blur-[120px] '></span>
           <span className='absolute left-32  -top-24 bg-[#82FFD2] w-60 aspect-square blur-[120px] '></span>
       <div className='container'>
@@ -21,7 +23,7 @@ export default function Home() {
               height={37}
               priority
             />
-          </div> 
+          </div>
 
           <div className='flex gap-x-8'>
             <span className='flex items-center gap-x-2'>
@@ -41,23 +43,23 @@ export default function Home() {
           <div>
             <div className="overflow-hidden">
               <p className=" leading-[1.18]  capitalize text-5xl font-bold text-brandBlue-700 animate-reveal  ">
-                find the place to 
+                find the place to
               </p>
             </div>
             <div className="overflow-hidden">
-              <p className='leading-[1.18]  capitalize text-5xl font-bold text-brandBlue-700 animate-reveal'>live <span className="text-white text-shadow ">your dreams</span> <br /></p>
+              <p className='leading-[1.18]  capitalize text-5xl font-bold text-brandBlue-700 animate-reveal'>live <span  className="text-transparent text-stroke">your dreams</span> <br /></p>
             </div>
             <div className="overflow-hidden">
               <p className='leading-[1.18]  capitalize text-5xl font-bold text-brandBlue-700 animate-reveal'>easily here</p>
             </div>
           </div>
                   <p className="w-8/12 text-sm text-brandGray-500" >Everything you need about finding your place to live will be here, where it will be easier for you</p>
-                  <div className="flex items-center w-4/5 py-1 pl-5 pr-1 border rounded-full ">
-                    <LocationIcon className='w-6 h-6 fill-brandYellow-500' />                
+                  <div className="flex items-center w-4/5 py-1 pl-5 pr-1 border rounded-full border-neutral-300 ">
+                    <LocationIcon className='w-6 h-6 fill-brandYellow-500' />
                     <input className="w-full ml-3 text-xs appearance-none oultine-none focus-within:outline-none placeholder:text-brandGray-500 placeholder:font-semibold" placeholder="Search for the location you want!" type="text" />
                       <Button variant="primary" >
                         Search
-                        <ChevronRight className='text-current' />                     
+                        <ChevronRight className='text-current' />
                       </Button>
                   </div>
 
@@ -79,14 +81,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
-        
-
         </div>
       </div>
-      
-      <div className='fixed top-0 w-full'>
-        <div className='relative flex w-1/2 h-full ml-auto '>
+
+      <div className='absolute top-0 w-full '>
+        <div className='relative flex w-1/2 h-full ml-auto overflow-x-hidden '>
+          {/* Line draws */}
+          <div className='absolute w-12 h-16 border-2 border-red-500 top-12 left-1 '></div>
         <Image
           className="relative "
           src="/cover.png"
@@ -95,17 +96,43 @@ export default function Home() {
           height={1000}
           priority
           />
-          <div className='absolute flex bottom-8 left-8'>
-            <div className=' flex p-6 bg-white rounded-[32px] [&_img]:-ml-6 pl-12 [&_img]:border-[3px] [&_img]:border-white'>
-                <Image src="/portait_1.jpg" className='object-cover rounded-full aspect-square'  alt='Protait image'  height={56} width={56}/>
-                <Image src="/portait_1.jpg" className='object-cover rounded-full aspect-square'  alt='Protait image'  height={56} width={56}/>
-                <Image src="/portait_1.jpg" className='object-cover rounded-full aspect-square'  alt='Protait image'  height={56} width={56}/>
+          <div className='absolute w-[140%] flex gap-x-6 bottom-8 left-8'>
+            <div className='flex gap-x-2 bg-white rounded-[32px] p-6 pl-12'>
+              <div className=' shrink-0 w-auto flex [&_img]:-ml-7 [&_img]:border-[3px] [&_img]:border-white '>
+                  <Image src="/portait_1.jpg" className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)]'  alt='Protait image'  height={53} width={53}/>
+                  <Image src="/portait_1.jpg" className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)] '  alt='Protait image'  height={53} width={53}/>
+                  <Image src="/portait_1.jpg" className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)] '  alt='Protait image'  height={53} width={53}/>
+              </div>
+              <div className='flex flex-col justify-between py-1 w-max'>
+                <p className='text-base font-semibold text-brandBlue-700 whitespace-nowrap'>1K+ People</p>
+                <p className='text-xs font-normal text-brandBlue-100 whitespace-nowrap'>Successfully Getting Home</p>
+              </div>
+            </div>
+
+            <div className='flex gap-x-2 bg-white rounded-[32px] p-6'>
+              <Image src="/portait_1.jpg" className='object-cover rounded-3xl shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)]'  alt='Protait image'  height={56} width={56}/>
+              <div className='flex flex-col justify-between py-1'>
+               
+                <p className='text-base font-semibold text-brandBlue-700 whitespace-nowrap'>56 Houses</p>
+                <p className='text-xs font-normal text-brandBlue-100 whitespace-nowrap'>Sold Monthly</p>
+              </div>
+            </div>
+
+            <div className='flex gap-x-2 bg-white rounded-[32px] p-6'>
+              <Image src="/portait_1.jpg" className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)]'  alt='Protait image'  height={56} width={56}/>
+              <div className='flex flex-col justify-between py-1'>
+               
+                <p className='text-base font-semibold text-brandBlue-700 whitespace-nowrap'>4k+</p>
+                <p className='text-xs font-normal text-brandBlue-100 whitespace-nowrap'>People Looking for New Homes</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+      </div>
+      <OurRecommendation />
     </main>
+
   )
 }
 
