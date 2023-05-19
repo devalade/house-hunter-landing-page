@@ -53,7 +53,7 @@ export default function Home() {
               <p className='leading-[1.18]  capitalize text-5xl font-bold text-brandBlue-700 animate-reveal'>easily here</p>
             </div>
           </div>
-                  <p className="w-8/12 text-sm text-brandGray-500" >Everything you need about finding your place to live will be here, where it will be easier for you</p>
+                  <p className="w-8/12 text-sm text-neutral-500" >Everything you need about finding your place to live will be here, where it will be easier for you</p>
                   <div className="flex items-center w-4/5 py-1 pl-5 pr-1 border rounded-full border-neutral-300 ">
                     <LocationIcon className='w-6 h-6 fill-brandYellow-500' />
                     <input className="w-full ml-3 text-xs appearance-none oultine-none focus-within:outline-none placeholder:text-brandGray-500 placeholder:font-semibold" placeholder="Search for the location you want!" type="text" />
@@ -64,7 +64,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <p className="p-0 text-sm text-brandGray-500">Our Partnership </p>
+                    <p className="p-0 text-sm text-neutral-500">Our Partnership </p>
                     <div className="flex w-full h-full mt-6 gap-x-4">
                       <div className="relative flex-none w-20 h-12">
                         <img src="/2.png" alt="" className="absolute inset-0 object-cover w-full h-full rounded-lg" loading="lazy" />
