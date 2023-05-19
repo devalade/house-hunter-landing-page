@@ -10,9 +10,9 @@ import {useId} from 'react';
 
 
 
-const FakeCardData: (CardProps & {id: string} )[]  = [
+const FakeCardData: (CardProps & {id: number} )[]  = [
     {
-        id: useId(),
+        id: 1,
         name: "Roselands House",
         price: 35_000_000,
         cover: '/popular_house.png',
@@ -23,7 +23,7 @@ const FakeCardData: (CardProps & {id: string} )[]  = [
         }
     },
     {
-        id: useId(),
+        id: 2,
         name: "Woodlandside",
         price: 20_000_000,
         cover: '/new_house.png',
@@ -34,7 +34,7 @@ const FakeCardData: (CardProps & {id: string} )[]  = [
         }
     },
     {
-        id: useId(),
+        id: 3,
         name: "The Old Lighthouse",
         price: 44_000_000,
         cover: '/best_deals.png',
@@ -45,7 +45,7 @@ const FakeCardData: (CardProps & {id: string} )[]  = [
         }
     },
     {
-        id: useId(),
+        id: 4,
         name: "Cosmo's House",
         price: 22_000_000,
         cover: '/popular_house.png',
