@@ -5,13 +5,56 @@ import {HouseIcon} from '../icon/house-icon';
 import {VillaIcon} from '../icon/villa-icon';
 import SectionTitle from './section-title';
 import {Button} from './ui';
-import {PopularIcon} from '../icon/popular-icon';
-import {ReactNode} from 'react';
-import {Badge} from './ui/badge';
+import {Card, CardProps} from './card';
+
+
+
+const FakeCardData: CardProps[] = [
+    {
+        name: "Roselands House",
+        price: 35_000_000,
+        cover: '/popular_house.png',
+        type: 'popular',
+        user: {
+            fullname: 'Dianne Russell',
+            location: 'Manchester, Kentucky'
+        }
+    },
+    {
+        name: "Woodlandside",
+        price: 20_000_000,
+        cover: '/new_house.png',
+        type: 'new-house',
+        user: {
+            fullname: 'Robert Fox',
+            location: 'Dr. San Jose, South Dakota'
+        }
+    },
+    {
+        name: "The Old Lighthouse",
+        price: 44_000_000,
+        cover: '/best_deals.png',
+        type: 'best-deals',
+        user: {
+            fullname: 'Ronald Richards',
+            location: 'Santa Ana, Illinois'
+        }
+    },
+    {
+        name: "Cosmo's House",
+        price: 22_000_000,
+        cover: '/popular_house.png',
+        type: 'popular',
+        user: {
+            fullname: 'Jenny Wilson',
+            location: 'Preston Rd. Inglewood, Maine 98380'
+        }
+    },
+];
 
 export default function OurRecommendation() {
     return(
-        <section className='container mt-[120px]'>
+        <section className='container mt-[120px] h-full'>
             <div className='flex items-end justify-between mb-[40px]'>
                 <SectionTitle title='Our Recommendation' subTitle='Featured House' />
                 <div className='flex gap-x-[32px] items-center'>
@@ -39,42 +82,14 @@ export default function OurRecommendation() {
                 </div>
 
             </div>
-            <div className='flex ml-10 gap-x-4'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+            <div className='relative'>
+                <div className='absolute flex ml-10 gap-x-4 w-[150%]'>
+                    {FakeCardData.map(data => (<Card {...data} />))}
+                </div>
             </div>
         </section>
     )
 }
-
-function Card() {
-    return (
-        <div className='space-y-[24px] '>
-            <div className='relative flex'>
-                <Image src='/popular_house.png' width={340} height={382} alt='Popular house image' />
-                <div className='absolute bottom-4 left-4 '>
-                    <Badge color='blue' label='Popular' icon={<PopularIcon className='w-[16px] h-[16px]' />} />
-                </div>
-            </div>
-            <div className=''>
-                <p className='text-2xl font-medium text-brandBlue-700'>Roselands House</p>
-                <p className='text-xl text-neutral-700'>$ 35.000.000</p>
-            </div>
-            <div className='flex items-center gap-x-2'>
-                <Image className='object-cover rounded-full aspect-square' src="/portait_1.jpg" width={40} height={40} alt='Dianne Russell profile image'  />
-                <div>
-                    <p className='text-lg font-medium text-brandBlue-700'>Dianne Russell</p>
-                    <p className='text-sm font-medium text-neutral-500'>Manchester, Kentucky</p>
-                </div>
-            </div>
-
-        </div>
-    );
-}
-
-
 
 
 

@@ -5,6 +5,7 @@ const badgeClassNames = {
     blue: 'flex items-center px-4 py-2 text-[#1D4ED8] bg-[#DBEAFE] rounded-full gap-x-2',
     green: 'flex items-center px-4 py-2 text-brandGreen-700 bg-brandGreen-100 rounded-full gap-x-2 '
 }
+export type Badge = keyof typeof badgeClassNames; 
 
 type BadgeProps = {
     icon: ReactNode;
