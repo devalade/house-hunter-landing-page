@@ -30,6 +30,10 @@ export type CardProps = {
 
 export function Card(props: CardProps) {
     const  { type = 'popular', name, price, cover, user } = props;
+
+    function formatCurrency(price: number) {
+        return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 1 }).format(price);
+    }
     return (
         <div className='space-y-[24px] '>
             <div className='relative flex'>
@@ -40,7 +44,7 @@ export function Card(props: CardProps) {
             </div>
             <div className=''>
                 <p className='text-2xl font-medium text-brandBlue-700'>{name}</p>
-                <p className='text-xl text-neutral-700'>{new Intl.NumberFormat('en-US').format(price)}</p>
+                <p className='text-xl text-neutral-700'>{formatCurrency(price)}</p>
             </div>
             <div className='flex items-center gap-x-2'>
                 <Image className='object-cover rounded-full aspect-square' src="/portait_1.jpg" width={40} height={40} alt={`${user.fullname} profile image`}  />
