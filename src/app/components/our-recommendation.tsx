@@ -6,11 +6,13 @@ import {VillaIcon} from '../icon/villa-icon';
 import SectionTitle from './section-title';
 import {Button} from './ui';
 import {Card, CardProps} from './card';
+import {useId} from 'react';
 
 
 
-const FakeCardData: CardProps[] = [
+const FakeCardData: (CardProps & {id: string} )[]  = [
     {
+        id: useId(),
         name: "Roselands House",
         price: 35_000_000,
         cover: '/popular_house.png',
@@ -21,6 +23,7 @@ const FakeCardData: CardProps[] = [
         }
     },
     {
+        id: useId(),
         name: "Woodlandside",
         price: 20_000_000,
         cover: '/new_house.png',
@@ -31,6 +34,7 @@ const FakeCardData: CardProps[] = [
         }
     },
     {
+        id: useId(),
         name: "The Old Lighthouse",
         price: 44_000_000,
         cover: '/best_deals.png',
@@ -41,6 +45,7 @@ const FakeCardData: CardProps[] = [
         }
     },
     {
+        id: useId(),
         name: "Cosmo's House",
         price: 22_000_000,
         cover: '/popular_house.png',
@@ -84,7 +89,7 @@ export default function OurRecommendation() {
             </div>
             <div className='relative'>
                 <div className='absolute flex ml-10 gap-x-4 w-[150%]'>
-                    {FakeCardData.map(data => (<Card {...data} />))}
+                    {FakeCardData.map(data => (<Card key={data.id} {...data} />))}
                 </div>
             </div>
         </section>

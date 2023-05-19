@@ -30,7 +30,6 @@ export type CardProps = {
 
 export function Card(props: CardProps) {
     const  { type = 'popular', name, price, cover, user } = props;
-
     function formatCurrency(price: number) {
         return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 1 }).format(price);
     }
