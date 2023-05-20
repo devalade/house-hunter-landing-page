@@ -1,19 +1,25 @@
 import Image from 'next/image';
-import {Badge} from './ui';
-import {PopularIcon} from '../icon/popular-icon';
+import {Badge} from '@/components/ui';
+import {FireIcon} from '@/icon/fire-icon';
+import {ReactNode} from 'react';
+import {HouseIcon} from '@/icon/house-icon';
+import {WalletIcon} from '@/icon/wallet-icon';
 
-const cardType: Record<string, { badgeColor: Badge; badgeLabel: string  }> = {
+const cardType: Record<string, { badgeColor: Badge; badgeLabel: string; icon: ReactNode  }> = {
     popular: {
         badgeColor: 'red',
-        badgeLabel: 'Popular'
+        badgeLabel: 'Popular',
+        icon: <FireIcon className='w-[16px] h-[16px]' />,
     },
     'new-house': {
         badgeColor: 'blue',
-        badgeLabel: 'New House'
+        badgeLabel: 'New House',
+        icon: <HouseIcon className='w-[16px] h-[16px]' />,
     },
     'best-deals': {
         badgeColor: 'green',
-        badgeLabel: 'Best Deals'
+        badgeLabel: 'Best Deals',
+        icon: <WalletIcon className='w-[16px] h-[16px]' />,
     }
 }
 
@@ -38,7 +44,7 @@ export function Card(props: CardProps) {
             <div className='relative flex'>
                 <Image src={cover} width={340} height={382} alt='Popular house image' />
                 <div className='absolute bottom-4 left-4 '>
-                    <Badge color={cardType[type].badgeColor} label={cardType[type].badgeLabel} icon={<PopularIcon className='w-[16px] h-[16px]' />} />
+                    <Badge color={cardType[type].badgeColor} label={cardType[type].badgeLabel} icon={cardType[type].icon} />
                 </div>
             </div>
             <div className=''>

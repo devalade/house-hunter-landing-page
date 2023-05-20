@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { PropsWithChildren } from 'react'
-import {Button} from './components/ui';
-import { ChevronRight } from './icon/chevon-right-icon';
-import { LocationIcon } from './icon/location-icon';
-import OurRecommendation from './components/our-recommendation';
+import {Button} from '../components/ui';
+import { ChevronRight } from '../icon/chevon-right-icon';
+import { LocationIcon } from '../icon/location-icon';
+import OurRecommendation from '../components/our-recommendation';
+import ReadyToSell from '@/components/ready-to-sell';
 
 export default function Home() {
   return (
@@ -30,7 +31,6 @@ export default function Home() {
               <NavItem href='#'>About Us</NavItem>
               <NavItem href='#'>Article</NavItem>
               <NavItem href='#'>Property</NavItem>
-
             </span>
               <Button variant="secondary">
                 <Link href="">Sign Up! </Link>
@@ -131,6 +131,8 @@ export default function Home() {
       </div>
       </div>
       <OurRecommendation />
+
+      <ReadyToSell />
     </main>
 
   )

@@ -1,4 +1,4 @@
-export function PopularIcon(props: IconProps) {
+export function FireIcon(props: IconProps) {
     const { className } = props;
     return (
         <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

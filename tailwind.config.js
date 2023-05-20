@@ -18,6 +18,7 @@ module.exports = {
     },
     colors: {
       white: "#FFF",
+      transparent: "#FFFFFF00",
       neutral: {
         DEFAULT: "#F0F3FD",
         200: "#F0F3FD",

@@ -1,12 +1,10 @@
-import Image from 'next/image';
-import {AppartmentIcon} from '../icon/appartment-icon';
-import {ChevronRight} from '../icon/chevon-right-icon';
-import {HouseIcon} from '../icon/house-icon';
-import {VillaIcon} from '../icon/villa-icon';
-import SectionTitle from './section-title';
-import {Button} from './ui';
-import {Card, CardProps} from './card';
-import {useId} from 'react';
+import {AppartmentIcon} from '@/icon/appartment-icon';
+import {ChevronRight} from '@/icon/chevon-right-icon';
+import {HouseIcon} from '@/icon/house-icon';
+import {VillaIcon} from '@/icon/villa-icon';
+import SectionTitle from '@/components/section-title';
+import {Button} from '@/components/ui';
+import {Card, CardProps} from '@/components/card';
 
 
 
@@ -59,8 +57,8 @@ const FakeCardData: (CardProps & {id: number} )[]  = [
 
 export default function OurRecommendation() {
     return(
-        <section className='container mt-[120px] h-full'>
-            <div className='flex items-end justify-between mb-[40px]'>
+        <section className=' mt-[120px]  h-full overflow-x-hidden '>
+            <div className='container flex items-end justify-between mb-[40px]'>
                 <SectionTitle title='Our Recommendation' subTitle='Featured House' />
                 <div className='flex gap-x-[32px] items-center'>
                     <Button variant="secondary-light">
@@ -87,10 +85,8 @@ export default function OurRecommendation() {
                 </div>
 
             </div>
-            <div className='relative'>
-                <div className='absolute flex ml-10 gap-x-4 w-[150%]'>
-                    {FakeCardData.map(data => (<Card key={data.id} {...data} />))}
-                </div>
+            <div className=' flex ml-16 sm:ml-20 lg:ml-40 xl:ml-48 2xl:ml-58 gap-x-4 w-[100vw] overflow-auto'>
+                {FakeCardData.map(data => (<Card key={data.id} {...data} />))}
             </div>
         </section>
     )
