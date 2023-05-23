@@ -4,6 +4,7 @@ import {BathRoomIcon, BedroomIcon, CarportIcon, FloorIcon} from '@/icon';
 import Image from 'next/image';
 import {Button} from '@/components/ui';
 import {PhoneIcon} from '@/icon/phone-icon';
+import {PlayCircleIcon} from '@/icon/play-circle';
 
 const HOUSE_DETAIL_DATA: (HouseDetailItemProps & { id: number } )[] = [
     {
@@ -62,7 +63,12 @@ export default function ReadyToSell() {
                 </div>
             </div>
             <div className=' relative flex w-[488px] h-[416px] rounded-sm'>
-                <Image src="/ready_to_sell_image_1.png"  className='absolute inset-0 object-cover w-full h-full'  width={500} height={500} alt='Video cover image' />
+                <div className='relative flex w-full'>
+                    <span className='absolute inset-0 z-50 flex items-center justify-center w-full h-full bg-black/20'>
+                        <PlayCircleIcon />
+                    </span>
+a                   <Image src="/ready_to_sell_image_1.png"  className='absolute inset-0 object-cover w-full h-full'  width={500} height={500} alt='Video cover image' />
+                </div>
                 <div className='absolute bottom-0 flex items-end translate-y-1/3 -translate-x-9 gap-x-3 '>
                     <Image src="/ready_to_sell_image_2.png" width={296} height={168} alt='Other detail image' />
                     <div className='flex gap-x-2'>

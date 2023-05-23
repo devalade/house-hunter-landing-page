@@ -6,6 +6,7 @@ import { ChevronRight } from '../icon/chevon-right-icon';
 import { LocationIcon } from '../icon/location-icon';
 import OurRecommendation from '../components/our-recommendation';
 import ReadyToSell from '@/components/ready-to-sell';
+import SeeOurReview from '@/components/see-our-review';
 
 export default function Home() {
   return (
@@ -131,8 +132,8 @@ export default function Home() {
       </div>
       </div>
       <OurRecommendation />
-
       <ReadyToSell />
+      <SeeOurReview />
     </main>
 
   )
