@@ -17,12 +17,12 @@ module.exports = {
       },
     },
     colors: {
-      white: "#FFF",
-      black: "#000",
-      transparent: "#FFFFFF00",
+      white: '#FFF',
+      black: '#000',
+      transparent: '#FFFFFF00',
       neutral: {
-        DEFAULT: "#F0F3FD",
-        200: "#F0F3FD",
+        DEFAULT: '#F0F3FD',
+        200: '#F0F3FD',
         300: '#E0E3EB',
         500: '#888B97',
         700: '#3C4563',
@@ -32,21 +32,21 @@ module.exports = {
         500: '#EF4444',
       },
       brandGreen: {
-        "100": "#D1FAE5",
-        "500": "#10B981",
-        "700": "#047857",
+        100: '#D1FAE5',
+        500: '#10B981',
+        700: '#047857',
       },
       brandBlue: {
-        "100": "#626687",
-        "700": "#1B1C57"
+        100: '#626687',
+        700: '#1B1C57',
       },
       brandYellow: {
-        "500": "#F59E0B"
-      }
+        500: '#F59E0B',
+      },
     },
     extend: {
-      'content': ['Lexend'],
- 
+      content: ['Lexend'],
+
       animation: {
         reveal: 'reveal 0.8s forwards',
       },
@@ -63,4 +63,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

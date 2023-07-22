@@ -5,25 +5,31 @@
 @tailwind utilities;
 
 @layer components {
-    .text-shadow {
-        text-shadow: -1px 1px 0 #1B1C57,
-                          1px 1px 0 #1B1C57,
-                         1px -1px 0 #1B1C57,
-                        -1px -1px 0 #1B1C57;
-    }
+  .text-shadow {
+    text-shadow: -1px 1px 0 #1b1c57, 1px 1px 0 #1b1c57, 1px -1px 0 #1b1c57,
+      -1px -1px 0 #1b1c57;
+  }
 
-    .text-stroke {
-        -webkit-text-stroke: 1px #1B1C57;
-        text-stroke: 1px #1B1C57;
-    }
+  .text-stroke {
+    -webkit-text-stroke: 1px #1b1c57;
+    text-stroke: 1px #1b1c57;
+  }
 
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
-    
-    /* For IE, Edge and Firefox */
-    .scrollbar-hide {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-    }
-}   
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .section-title {
+    @apply text-sm capitalize text-brandYellow-500;
+  }
+
+  .section-subtitle {
+    @apply ml-8 text-[32px] capitalize font-semibold text-brandBlue-700;
+  }
+}
