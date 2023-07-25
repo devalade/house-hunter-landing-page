@@ -4,17 +4,16 @@
 import Image from 'next/image';
 import StarIcon from '@/icon/start-icon';
 import { twMerge } from 'tailwind-merge';
-import { AnimatePresence, motion } from 'framer-motion';
-import { forwardRef, useRef, useState } from 'react';
-import { useWindowSize } from '@uidotdev/usehooks';
+import { forwardRef } from 'react';
+import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function SeeOurReview() {
-  const [position, setPosition] = useState<number>(0);
-  const cardRef = useRef();
-  const size = useWindowSize();
-  const CARD_SIZE = size.width * 0.6;
-  const PADDING = 60;
-
+  const swiperSlide = useSwiperSlide();
   return (
     <section className='relative mt-[120px] h-screen w-screen overflow-hidden'>
       <div className='w-full space-y-2'>
@@ -27,29 +26,32 @@ export default function SeeOurReview() {
       </div>
 
       <div className='relative flex gap-x-4 h-[505px]'>
-        <AnimatePresence>
-          {/* <ReviewCard className='absolute -translate-x-1/2' /> */}
-          {[1, 2].map((k, index) => (
-            <MotionReviewCard
-              key={k}
-              initial={{ scale: 0 }}
-              animate={{
-                scale: 1,
-                x:
-                  index == position
-                    ? size.width / 2 - CARD_SIZE / 2
-                    : size.width - CARD_SIZE / 2 + PADDING,
-              }}
-              className='absolute  origin-center'
-            />
+        <Swiper
+          slidesPerView={'auto'}
+          centeredSlides={true}
+          spaceBetween={30}
+          autoplay
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className=''>
+          {[1, 2, 3].map((i) => (
+            <SwiperSlide className='!w-auto' key={i}>
+              <ReviewCard />
+            </SwiperSlide>
           ))}
-        </AnimatePresence>
+        </Swiper>
       </div>
       <div className='flex items-center justify-center w-full mt-6 '>
         <div className='space-x-2'>
-          <span className='inline-block w-2 aspect-square rounded-full bg-[#E0E3EB]'></span>
-          <span className='inline-block w-2 aspect-square rounded-full bg-[#3C4563]'></span>
-          <span className='inline-block w-2 aspect-square rounded-full bg-[#E0E3EB]'></span>
+          {[1, 2, 3].map((k) => (
+            <span
+              key={k}
+              className={`inline-block w-2 aspect-square rounded-full ${
+                swiperSlide?.isActive ? 'bg-neutral-700' : 'bg-[#E0E3EB]'
+              } `}></span>
+          ))}
         </div>
       </div>
     </section>
@@ -105,5 +107,3 @@ const ReviewCard = forwardRef((props: ReviewCardProps, ref) => {
     </div>
   );
 });
-
-const MotionReviewCard = motion(ReviewCard);
