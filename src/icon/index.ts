@@ -10,6 +10,4 @@ export * from './house-icon';
 export * from './location-icon';
 export * from './villa-icon';
 export * from './wallet-icon';
-
-
-
+export * from './round-access-time-icon';

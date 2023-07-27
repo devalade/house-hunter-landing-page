@@ -25,7 +25,7 @@ export default function SeeOurReview() {
         </p>
       </div>
 
-      <div className='relative flex gap-x-4 h-[505px]'>
+      <div className='relative flex gap-x-4 h-[505px] mt-12'>
         <Swiper
           slidesPerView={'auto'}
           centeredSlides={true}

@@ -32,4 +32,9 @@
   .section-subtitle {
     @apply ml-8 text-[32px] capitalize font-semibold text-brandBlue-700;
   }
+
+  .text-balance {
+    white-space: unset;
+    text-wrap: balance;
+  }
 }
