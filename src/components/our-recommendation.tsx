@@ -81,7 +81,7 @@ export default function OurRecommendation() {
 
         <div className='flex items-center gap-x-[32px]'>
           <Button variant='secondary-muted'>
-            <ChevronLeft className='w-6 h-6 rotate-180' />
+            <ChevronLeft className='w-6 h-6 rotate-180  ' />
           </Button>
           <Button>
             <ChevronRight className='w-6 h-6' />
