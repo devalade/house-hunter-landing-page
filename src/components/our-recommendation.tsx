@@ -7,10 +7,11 @@ import { VillaIcon } from '@/icon/villa-icon';
 import SectionTitle from '@/components/section-title';
 import { Button } from '@/components/ui';
 import { Card, CardProps } from '@/components/card';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import { ChevronLeft } from '@/icon';
+import { ElementRef, useRef, useState } from 'react';
+import { SwiperSlide, Swiper, useSwiper, useSwiperSlide } from 'swiper/react';
 
 const FakeCardData: (CardProps & { id: number })[] = [
   {
@@ -22,6 +23,7 @@ const FakeCardData: (CardProps & { id: number })[] = [
     user: {
       fullname: 'Dianne Russell',
       location: 'Manchester, Kentucky',
+      avatar: '/avatar-3.jpeg',
     },
   },
   {
@@ -33,6 +35,7 @@ const FakeCardData: (CardProps & { id: number })[] = [
     user: {
       fullname: 'Robert Fox',
       location: 'Dr. San Jose, South Dakota',
+      avatar: '/avatar-9.jpeg',
     },
   },
   {
@@ -44,6 +47,7 @@ const FakeCardData: (CardProps & { id: number })[] = [
     user: {
       fullname: 'Ronald Richards',
       location: 'Santa Ana, Illinois',
+      avatar: '/avatar-8.jpeg',
     },
   },
   {
@@ -55,11 +59,27 @@ const FakeCardData: (CardProps & { id: number })[] = [
     user: {
       fullname: 'Jenny Wilson',
       location: 'Preston Rd. Inglewood, Maine 98380',
+      avatar: '/avatar-10.jpeg',
+    },
+  },
+  {
+    id: 5,
+    name: "Cosmo's House",
+    price: 22_000_000,
+    cover: '/popular_house.png',
+    type: 'popular',
+    user: {
+      fullname: 'Jenny Wilson',
+      location: 'Preston Rd. Inglewood, Maine 98380',
+      avatar: '/avatar-10.jpeg',
     },
   },
 ];
 
 export default function OurRecommendation() {
+  const swiperRef = useRef(null);
+
+  console.log({ swiperRef });
   return (
     <section className=' mt-[120px]  h-full overflow-x-hidden '>
       <div className='container flex items-end justify-between mb-[40px]'>
@@ -88,17 +108,19 @@ export default function OurRecommendation() {
           </Button>
         </div>
       </div>
-      <div className=' flex ml-16 sm:ml-20 lg:ml-40 xl:ml-48 2xl:ml-58 gap-x-4 w-[100vw] overflow-auto'>
-        <Swiper
-          spaceBetween={30}
-          //   slidesPerView={4}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}>
+      <div className=''>
+        <Swiper ref={swiperRef} spaceBetween={30} slidesPerView={'auto'}>
+          <SwiperSlide className='!w-fit'>
+            <div className='w-[1rem] sm:w-[2rem] lg:w-[4rem] xl:w-[5rem] 2xl:w-[6rem]' />
+          </SwiperSlide>
           {FakeCardData.map((data) => (
-            <SwiperSlide key={data.id} className='!w-auto'>
+            <SwiperSlide key={data.id} className='!w-fit'>
               <Card {...data} />
             </SwiperSlide>
           ))}
+          <SwiperSlide className='!w-fit'>
+            <div className='w-20' />
+          </SwiperSlide>
         </Swiper>
       </div>
     </section>

@@ -12,7 +12,7 @@ import Subscribe from '@/components/subscribe';
 
 export default function Home() {
   return (
-    <main>
+    <main className='overflow-x-hidden'>
       <div className='relative w-full h-screen'>
         <span className='absolute -left-28  top-6 bg-[#82F7FF] w-60 aspect-square blur-[120px] '></span>
         <span className='absolute left-32  -top-24 bg-[#82FFD2] w-60 aspect-square blur-[120px] '></span>
@@ -33,7 +33,10 @@ export default function Home() {
               <span className='flex items-center gap-x-2'>
                 <NavItem href='#'>About Us</NavItem>
                 <NavItem href='#'>Article</NavItem>
-                <NavItem href='#'>Property</NavItem>
+                <NavItem href='#'>
+                  Property
+                  <ChevronRight className='rotate-90 w-[18px] h-[18px]' />
+                </NavItem>
               </span>
               <Button variant='secondary'>
                 <Link href=''>Sign Up! </Link>
@@ -85,7 +88,9 @@ export default function Home() {
                 <p className='p-0 text-sm text-neutral-500'>Our Partnership </p>
                 <div className='flex w-full h-full mt-6 gap-x-4'>
                   <div className='relative flex-none w-20 h-12'>
-                    <img
+                    <Image
+                      width={84}
+                      height={64}
                       src='/2.png'
                       alt=''
                       className='absolute inset-0 object-cover w-full h-full rounded-lg'
@@ -93,7 +98,9 @@ export default function Home() {
                     />
                   </div>
                   <div className='relative flex-none w-20 h-12'>
-                    <img
+                    <Image
+                      width={84}
+                      height={64}
                       src='/3.png'
                       alt=''
                       className='absolute inset-0 object-cover w-full h-full rounded-lg'
@@ -101,7 +108,9 @@ export default function Home() {
                     />
                   </div>
                   <div className='relative flex-none w-20 h-12'>
-                    <img
+                    <Image
+                      width={84}
+                      height={64}
                       src='/4.png'
                       alt=''
                       className='absolute inset-0 object-cover w-full h-full rounded-lg'
@@ -109,7 +118,9 @@ export default function Home() {
                     />
                   </div>
                   <div className='relative flex-none w-20 h-12'>
-                    <img
+                    <Image
+                      width={84}
+                      height={64}
                       src='/5.png'
                       alt=''
                       className='absolute inset-0 object-cover w-full h-full rounded-lg'
@@ -138,21 +149,21 @@ export default function Home() {
               <div className='flex gap-x-2 bg-white rounded-[32px] p-6 pl-12'>
                 <div className=' shrink-0 w-auto flex [&_img]:-ml-7 [&_img]:border-[3px] [&_img]:border-white '>
                   <Image
-                    src='/portait_1.jpg'
+                    src='/avatar-1.jpeg'
                     className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)]'
                     alt='Protait image'
                     height={53}
                     width={53}
                   />
                   <Image
-                    src='/portait_1.jpg'
+                    src='/avatar-2.jpeg'
                     className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)] '
                     alt='Protait image'
                     height={53}
                     width={53}
                   />
                   <Image
-                    src='/portait_1.jpg'
+                    src='/avatar-3.jpeg'
                     className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)] '
                     alt='Protait image'
                     height={53}
@@ -171,7 +182,7 @@ export default function Home() {
 
               <div className='flex gap-x-2 bg-white rounded-[32px] p-6'>
                 <Image
-                  src='/portait_1.jpg'
+                  src='/houses.png'
                   className='object-cover rounded-3xl shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)]'
                   alt='Protait image'
                   height={56}
@@ -189,7 +200,7 @@ export default function Home() {
 
               <div className='flex gap-x-2 bg-white rounded-[32px] p-6'>
                 <Image
-                  src='/portait_1.jpg'
+                  src='/avatar-4.jpeg'
                   className='object-cover rounded-full shadow-lg aspect-square shadow-[rgba(89, 92, 219, 0.1)]'
                   alt='Protait image'
                   height={56}
@@ -316,7 +327,7 @@ function NavItem(props: NavItemProps) {
   return (
     <Link
       href={href}
-      className='block px-4 py-2 text-sm text-white border border-white rounded-full bg-white/30'>
+      className='flex gap-x-[10px] items-center px-4 py-2 text-sm text-white border border-white rounded-full bg-white/30'>
       {children}
     </Link>
   );
