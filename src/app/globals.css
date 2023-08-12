@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer components {
+  .container {
+    @apply w-full max-w-6xl mx-auto;
+  }
+
   .text-shadow {
     text-shadow: -1px 1px 0 #1b1c57, 1px 1px 0 #1b1c57, 1px -1px 0 #1b1c57,
       -1px -1px 0 #1b1c57;

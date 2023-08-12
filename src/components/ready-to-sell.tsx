@@ -58,7 +58,7 @@ export default function ReadyToSell() {
             <div className='flex items-center justify-between w-[440px]'>
               <div className='flex items-center gap-x-4'>
                 <Image
-                  src='/portait_1.jpg'
+                  src='/avatar-3.jpeg'
                   className='object-cover w-[56px] h-[56px] rounded-full aspect-square'
                   alt='Image profile'
                   width={56}
@@ -78,15 +78,14 @@ export default function ReadyToSell() {
           </div>
         </div>
       </div>
-      <div className=' relative flex w-[488px] h-[416px] rounded-sm'>
+      <div className=' relative flex w-[488px] h-[416px]'>
         <div className='relative flex w-full'>
-          <span className='absolute inset-0 z-50 flex items-center justify-center w-full h-full bg-black/20'>
-            <PlayCircleIcon />
-          </span>
-          a{' '}
+          <span className='absolute inset-0 z-50 flex items-center justify-center w-full h-full rounded-[4px] bg-black/20 '>
+            <PlayCircleIcon className='relative backdrop-blur before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500' />
+          </span>{' '}
           <Image
             src='/ready_to_sell_image_1.png'
-            className='absolute inset-0 object-cover w-full h-full'
+            className='absolute inset-0 object-cover w-full h-full rounded-[4px]'
             width={500}
             height={500}
             alt='Video cover image'

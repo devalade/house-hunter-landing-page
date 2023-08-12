@@ -224,9 +224,9 @@ export default function Home() {
       <SeeOurReview />
       <SeeTipsAndTricks />
       <Subscribe />
-      <footer className='my-[120px] relative container'>
-        <div className=' absolute -bottom-[160px] -right-[200px] w-96 blur-[60px] aspect-square bg-[#82BBFF]  rounded-full opacity-40' />
-        <div className=' absolute -bottom-[240px] right-12 w-96 blur-[60px] aspect-square bg-[#B9FF82]  rounded-full opacity-40' />
+      <footer className='mt-[120px] relative container h-[320px]'>
+        <div className=' absolute -bottom-[70px] -right-[200px] w-96 blur-[60px] aspect-square bg-[#82BBFF]  rounded-full opacity-40' />
+        <div className=' absolute -bottom-[120px] right-12 w-96 blur-[60px] aspect-square bg-[#B9FF82]  rounded-full opacity-40' />
 
         <div className='flex'>
           {/*  */}
@@ -282,22 +282,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-1/2 flex justify-between'>
+          <div className='flex justify-between w-1/2'>
             <div>
-              <p className='text-xl text-brandBlue-700 font-normal capitalize'>
+              <p className='text-xl font-normal capitalize text-brandBlue-700'>
                 Property
               </p>
-              <ul className='text-sm capitalize text-neutral-500 font-light space-y-3 mt-6'>
+              <ul className='mt-6 space-y-3 text-sm font-light capitalize text-neutral-500'>
                 <li className=''>House</li>
                 <li className=''>Apartment</li>
                 <li className=''>Villa</li>
               </ul>
             </div>
             <div>
-              <p className='text-xl text-brandBlue-700 font-normal capitalize'>
+              <p className='text-xl font-normal capitalize text-brandBlue-700'>
                 Article
               </p>
-              <ul className='text-sm capitalize text-neutral-500 font-light space-y-3 mt-6'>
+              <ul className='mt-6 space-y-3 text-sm font-light capitalize text-neutral-500'>
                 <li className=''>New Article</li>
                 <li className=''>Popular Article</li>
                 <li className=''>Most Read</li>
@@ -305,10 +305,10 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <p className='text-xl text-brandBlue-700 font-normal capitalize'>
+              <p className='text-xl font-normal capitalize text-brandBlue-700'>
                 Contact
               </p>
-              <ul className='text-sm capitalize text-neutral-500 font-light space-y-3 mt-6'>
+              <ul className='mt-6 space-y-3 text-sm font-light capitalize text-neutral-500'>
                 <li className=''>2464 Royal Ln. Mesa, New Jersey 45463</li>
                 <li className=''>(671) 555-0110</li>
                 <li className=''>info@hounter.com</li>

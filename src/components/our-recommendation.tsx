@@ -101,7 +101,7 @@ export default function OurRecommendation() {
 
         <div className='flex items-center gap-x-[32px]'>
           <Button variant='secondary-muted'>
-            <ChevronLeft className='w-6 h-6 rotate-180  ' />
+            <ChevronLeft className='w-6 h-6 rotate-180 ' />
           </Button>
           <Button>
             <ChevronRight className='w-6 h-6' />
@@ -111,7 +111,7 @@ export default function OurRecommendation() {
       <div className=''>
         <Swiper ref={swiperRef} spaceBetween={30} slidesPerView={'auto'}>
           <SwiperSlide className='!w-fit'>
-            <div className='w-[1rem] sm:w-[2rem] lg:w-[4rem] xl:w-[5rem] 2xl:w-[6rem]' />
+            <div className='w-[calc((100vw_-_1200px)/2)]' />
           </SwiperSlide>
           {FakeCardData.map((data) => (
             <SwiperSlide key={data.id} className='!w-fit'>
