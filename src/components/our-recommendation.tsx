@@ -10,8 +10,8 @@ import { Card, CardProps } from '@/components/card';
 
 import 'swiper/css';
 import { ChevronLeft } from '@/icon';
-import { ElementRef, useRef, useState } from 'react';
-import { SwiperSlide, Swiper, useSwiper, useSwiperSlide } from 'swiper/react';
+import { useRef } from 'react';
+import { SwiperSlide, Swiper } from 'swiper/react';
 
 const FakeCardData: (CardProps & { id: number })[] = [
   {
@@ -79,7 +79,6 @@ const FakeCardData: (CardProps & { id: number })[] = [
 export default function OurRecommendation() {
   const swiperRef = useRef(null);
 
-  console.log({ swiperRef });
   return (
     <section className=' mt-[120px]  h-full overflow-x-hidden '>
       <div className='container flex items-end justify-between mb-[40px]'>

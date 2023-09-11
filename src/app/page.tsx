@@ -12,10 +12,10 @@ import Subscribe from '@/components/subscribe';
 
 export default function Home() {
   return (
-    <main className='overflow-x-hidden'>
+    <main>
       <div className='relative w-full h-screen'>
-        <span className='absolute -left-28  top-6 bg-[#82F7FF] w-60 aspect-square blur-[120px] '></span>
-        <span className='absolute left-32  -top-24 bg-[#82FFD2] w-60 aspect-square blur-[120px] '></span>
+        {/* <span className='absolute -left-28  top-6 bg-[#82F7FF] w-60 aspect-square blur-[120px] '></span> */}
+        {/* <span className='absolute left-32  -top-24 bg-[#82FFD2] w-60 aspect-square blur-[120px] '></span> */}
         <div className='container'>
           <nav className='h-[80px] flex items-center justify-between relative z-50'>
             <div className='relative flex w-24'>
@@ -144,6 +144,7 @@ export default function Home() {
               width={2000}
               height={1000}
               priority
+              // loading='lazy'
             />
             <div className='absolute w-[140%] flex gap-x-6 bottom-8 left-8'>
               <div className='flex gap-x-2 bg-white rounded-[32px] p-6 pl-12'>
@@ -154,6 +155,7 @@ export default function Home() {
                     alt='Protait image'
                     height={53}
                     width={53}
+                    loading='lazy'
                   />
                   <Image
                     src='/avatar-2.jpeg'
@@ -161,6 +163,7 @@ export default function Home() {
                     alt='Protait image'
                     height={53}
                     width={53}
+                    loading='lazy'
                   />
                   <Image
                     src='/avatar-3.jpeg'
@@ -168,6 +171,7 @@ export default function Home() {
                     alt='Protait image'
                     height={53}
                     width={53}
+                    loading='lazy'
                   />
                 </div>
                 <div className='flex flex-col justify-between py-1 w-max'>
@@ -187,6 +191,7 @@ export default function Home() {
                   alt='Protait image'
                   height={56}
                   width={56}
+                  loading='lazy'
                 />
                 <div className='flex flex-col justify-between py-1'>
                   <p className='text-base font-semibold text-brandBlue-700 whitespace-nowrap'>
@@ -205,6 +210,7 @@ export default function Home() {
                   alt='Protait image'
                   height={56}
                   width={56}
+                  loading='lazy'
                 />
                 <div className='flex flex-col justify-between py-1'>
                   <p className='text-base font-semibold text-brandBlue-700 whitespace-nowrap'>

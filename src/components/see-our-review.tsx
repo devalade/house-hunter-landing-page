@@ -74,6 +74,7 @@ const ReviewCard = forwardRef(
           alt='Dianne Russell review'
           width={740}
           height={400}
+          loading='lazy'
         />
         <div className='absolute top-1/3 rounded-2xl shadow-2xl p-8 shadow-[#595CDB10] translate-y-1/2 w-[40vw]  h-[249px] right-1/2 translate-x-1/2 bg-white space-y-6'>
           <div className='space-y-4'>
@@ -94,6 +95,7 @@ const ReviewCard = forwardRef(
                 width={40}
                 height={40}
                 alt='Portrait image'
+                loading='lazy'
               />
               <div className='flex flex-col justify-between text-sm font-medium'>
                 <p className=' text-brandBlue-700'>Dianne Russell</p>

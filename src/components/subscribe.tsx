@@ -12,6 +12,8 @@ export default function Subscribe() {
           width={4000}
           height={3000}
           className='absolute inset-0 w-full h-full object-cover z-10 rounded-[32px] '
+          loading='lazy'
+          // placeholder='blur'
         />
         {/*Right Positioning image */}
         <Image
@@ -20,6 +22,8 @@ export default function Subscribe() {
           width={430}
           height={354}
           className='absolute top-[32px] left-[44px] w-[81px] aspect-square object-cover border-2 border-neutral-200 rounded-3xl z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         <Image
@@ -28,6 +32,8 @@ export default function Subscribe() {
           width={200}
           height={200}
           className='absolute top-[173px] left-[67px] w-[36px] aspect-square object-cover border-2 border-neutral-200 rounded-full z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         <Image
@@ -36,6 +42,8 @@ export default function Subscribe() {
           width={200}
           height={200}
           className='absolute top-[71px] left-[204px] w-[36px] aspect-square object-cover border-2 border-neutral-200 rounded-full z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         <Image
@@ -44,6 +52,8 @@ export default function Subscribe() {
           width={200}
           height={200}
           className='absolute top-[178px] left-[195px] w-[54px] aspect-square object-cover border-2 border-neutral-200 rounded-3xl z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         {/*Left Positioning image */}
@@ -53,6 +63,8 @@ export default function Subscribe() {
           width={430}
           height={354}
           className='absolute top-[44px] right-[200px] w-[81px] aspect-square object-cover border-2 border-neutral-200 rounded-3xl z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         <Image
@@ -61,6 +73,8 @@ export default function Subscribe() {
           width={200}
           height={200}
           className='absolute top-[143px] right-[200px] w-[36px] aspect-square object-cover border-2 border-neutral-200 rounded-full z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         <Image
@@ -69,6 +83,8 @@ export default function Subscribe() {
           width={200}
           height={200}
           className='absolute top-[107px] right-[82px] w-[36px] aspect-square object-cover border-2 border-neutral-200 rounded-full z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         <Image
@@ -77,6 +93,8 @@ export default function Subscribe() {
           width={200}
           height={200}
           className='absolute top-[197px] right-[73px] w-[54px] aspect-square object-cover border-2 border-neutral-200 rounded-3xl z-50'
+          loading='lazy'
+          // placeholder='blur'
         />
 
         <div className='absolute inset-0 w-full h-full object-cover flex items-center justify-center z-50'>

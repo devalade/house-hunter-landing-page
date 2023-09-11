@@ -89,6 +89,7 @@ export default function ReadyToSell() {
             width={500}
             height={500}
             alt='Video cover image'
+            loading='lazy'
           />
         </div>
         <div className='absolute bottom-0 flex items-end translate-y-1/3 -translate-x-9 gap-x-3 '>
@@ -97,6 +98,7 @@ export default function ReadyToSell() {
             width={296}
             height={168}
             alt='Other detail image'
+            loading='lazy'
           />
           <div className='flex gap-x-2'>
             <Image
@@ -104,12 +106,14 @@ export default function ReadyToSell() {
               width={96}
               height={80}
               alt='Other detail image'
+              loading='lazy'
             />
             <Image
               src='/ready_to_sell_image_3.png'
               width={96}
               height={80}
               alt='Other detail image'
+              loading='lazy'
             />
           </div>
         </div>
