@@ -12,10 +12,10 @@ import Subscribe from '@/components/subscribe';
 
 export default function Home() {
   return (
-    <main>
+    <main className='overflow-hidden'>
       <div className='relative w-full h-screen'>
-        {/* <span className='absolute -left-28  top-6 bg-[#82F7FF] w-60 aspect-square blur-[120px] '></span> */}
-        {/* <span className='absolute left-32  -top-24 bg-[#82FFD2] w-60 aspect-square blur-[120px] '></span> */}
+        <span className='absolute -left-28  top-6 bg-[#82F7FF] w-60 aspect-square blur-[120px] '></span>
+        <span className='absolute left-32  -top-24 bg-[#82FFD2] w-60 aspect-square blur-[120px] '></span>
         <div className='container'>
           <nav className='h-[80px] flex items-center justify-between relative z-50'>
             <div className='relative flex w-24'>
@@ -230,7 +230,7 @@ export default function Home() {
       <SeeOurReview />
       <SeeTipsAndTricks />
       <Subscribe />
-      <footer className='mt-[120px] relative container h-[320px]'>
+      <footer className='mt-[120px] relative container  max-h-[320px] pb-14  '>
         <div className=' absolute -bottom-[70px] -right-[200px] w-96 blur-[60px] aspect-square bg-[#82BBFF]  rounded-full opacity-40' />
         <div className=' absolute -bottom-[120px] right-12 w-96 blur-[60px] aspect-square bg-[#B9FF82]  rounded-full opacity-40' />
 

@@ -19,7 +19,7 @@ export default function SeeOurReview() {
   }
 
   return (
-    <section className='relative mt-[120px]  w-screen overflow-hidden'>
+    <section className='relative mt-[120px]  overflow-hidden'>
       <div className='w-full space-y-2'>
         <span className='block w-6 mx-auto h-[1px] bg-brandYellow-500'></span>
 
