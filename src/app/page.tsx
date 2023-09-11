@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { PropsWithChildren } from 'react';
-import { Button } from '../components/ui';
+import { Button, PropertyDropdownMenu, button } from '../components/ui';
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { ChevronRight } from '../icon/chevon-right-icon';
 import { LocationIcon } from '../icon/location-icon';
 import OurRecommendation from '../components/our-recommendation';
@@ -29,14 +30,11 @@ export default function Home() {
               />
             </div>
 
-            <div className='flex gap-x-8'>
+            <div className='flex gap-x-8 font-normal'>
               <span className='flex items-center gap-x-2'>
                 <NavItem href='#'>About Us</NavItem>
                 <NavItem href='#'>Article</NavItem>
-                <NavItem href='#'>
-                  Property
-                  <ChevronRight className='rotate-90 w-[18px] h-[18px]' />
-                </NavItem>
+                <PropertyDropdownMenu />
               </span>
               <Button variant='secondary'>
                 <Link href=''>Sign Up! </Link>
@@ -331,9 +329,7 @@ type NavItemProps = PropsWithChildren<{ href: string }>;
 function NavItem(props: NavItemProps) {
   const { href, children } = props;
   return (
-    <Link
-      href={href}
-      className='flex gap-x-[10px] items-center px-4 py-2 text-sm text-white border border-white rounded-full bg-white/30'>
+    <Link href={href} className={button({ variant: 'link' })}>
       {children}
     </Link>
   );
